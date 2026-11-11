@@ -1,0 +1,4 @@
+{
+  "projects": "project TEXT PRIMARY KEY, department TEXT NOT NULL",
+  "work": "record TEXT PRIMARY KEY, project TEXT NOT NULL, day TEXT NOT NULL, hours TEXT NOT NULL"
+}
