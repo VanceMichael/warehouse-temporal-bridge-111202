@@ -1,0 +1,12 @@
+[
+  {
+    "version": "p3-zero",
+    "project": "p3",
+    "valid_from": "2026-09-01",
+    "valid_to": "2026-10-01",
+    "members": [
+      {"department": "d1", "weight": "1.00"},
+      {"department": "d4", "weight": "0.00"}
+    ]
+  }
+]

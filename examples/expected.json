@@ -1,6 +1,10 @@
 [
   {
     "department": "d1",
-    "hours": "10.01"
+    "hours": "50.01"
+  },
+  {
+    "department": "d2",
+    "hours": "20.00"
   }
 ]

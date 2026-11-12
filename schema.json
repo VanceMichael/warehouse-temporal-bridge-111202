@@ -1,4 +1,18 @@
 {
-  "projects": "project TEXT PRIMARY KEY, department TEXT NOT NULL",
-  "work": "record TEXT PRIMARY KEY, project TEXT NOT NULL, day TEXT NOT NULL, hours TEXT NOT NULL"
+  "tables": {
+    "projects": "project TEXT PRIMARY KEY, department TEXT NOT NULL -- 来源层单归属（遗留对照）",
+    "work": "record TEXT PRIMARY KEY, project TEXT NOT NULL, day TEXT NOT NULL, hours TEXT NOT NULL -- 课题工作量事实，十进制文本",
+    "bridge_versions": "version TEXT NOT NULL, project TEXT NOT NULL, valid_from TEXT NOT NULL, valid_to TEXT, status TEXT CHECK(status IN draft/published/rejected), digest TEXT NOT NULL, published_at TEXT, PRIMARY KEY(version, project) -- 带有效期的桥接版本头",
+    "bridge_members": "version TEXT NOT NULL, project TEXT NOT NULL, department TEXT NOT NULL, weight TEXT NOT NULL, PRIMARY KEY(version, project, department) -- 精确权重成员，允许 0 权重，发布版合计必须为 1"
+  },
+  "views": {
+    "v_bridge_exact": "已发布/草稿桥接的精确权重关系解释视图，不产生汇总、不落盘展开"
+  },
+  "rules": [
+    "同一项目已发布版本的半开有效期 [valid_from, valid_to) 不得重叠，重叠超配拒绝发布",
+    "权重为精确 Decimal：允许 0（保留关系不贡献），禁止负数，发布版必须精确合计为 1",
+    "事实按发生日 day 选择当时有效已发布版本，与导入/发布日期无关；无方案事实进入未分配组",
+    "分摊按 0.01 记账单位量化，最大余数法稳定处理尾差，单事实分摊金额严格守恒",
+    "工作量可求和；项目数与参与院系数为去重指标，上卷必须 COUNT DISTINCT，禁止跨院系相加"
+  ]
 }

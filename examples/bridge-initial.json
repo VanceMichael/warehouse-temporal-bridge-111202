@@ -1,0 +1,33 @@
+[
+  {
+    "version": "p1-v1",
+    "project": "p1",
+    "valid_from": "2026-10-01",
+    "valid_to": null,
+    "members": [
+      {"department": "d1", "weight": "0.70"},
+      {"department": "d2", "weight": "0.30"}
+    ]
+  },
+  {
+    "version": "p2-v1",
+    "project": "p2",
+    "valid_from": "2026-10-01",
+    "valid_to": "2026-11-01",
+    "members": [
+      {"department": "d1", "weight": "0.60"},
+      {"department": "d2", "weight": "0.40"}
+    ]
+  },
+  {
+    "version": "p3-v1",
+    "project": "p3",
+    "valid_from": "2026-10-01",
+    "valid_to": null,
+    "members": [
+      {"department": "d1", "weight": "0.34"},
+      {"department": "d2", "weight": "0.33"},
+      {"department": "d3", "weight": "0.33"}
+    ]
+  }
+]

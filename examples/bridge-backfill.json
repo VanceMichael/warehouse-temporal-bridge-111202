@@ -1,0 +1,13 @@
+[
+  {
+    "version": "p2-v2-backfill",
+    "project": "p2",
+    "valid_from": "2026-10-01",
+    "valid_to": null,
+    "members": [
+      {"department": "d1", "weight": "0.50"},
+      {"department": "d2", "weight": "0.30"},
+      {"department": "d3", "weight": "0.20"}
+    ]
+  }
+]

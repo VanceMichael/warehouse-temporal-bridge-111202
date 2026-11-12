@@ -1,16 +1,16 @@
 {
   "projects": [
-    {
-      "project": "p1",
-      "department": "d1"
-    }
+    {"project": "p1", "department": "d1"},
+    {"project": "p2", "department": "d1"},
+    {"project": "p3", "department": "d2"}
   ],
   "work": [
-    {
-      "record": "w1",
-      "project": "p1",
-      "day": "2026-10-01",
-      "hours": "10.01"
-    }
+    {"record": "w1", "project": "p1", "day": "2026-10-01", "hours": "10.01"},
+    {"record": "w2", "project": "p2", "day": "2026-09-20", "hours": "10.00"},
+    {"record": "w3", "project": "p2", "day": "2026-10-05", "hours": "10.00"},
+    {"record": "w4", "project": "p2", "day": "2026-10-31", "hours": "10.00"},
+    {"record": "w5", "project": "p2", "day": "2026-11-02", "hours": "10.00"},
+    {"record": "w6", "project": "p3", "day": "2026-10-15", "hours": "10.00"},
+    {"record": "w7", "project": "p3", "day": "2026-11-10", "hours": "10.00"}
   ]
 }
